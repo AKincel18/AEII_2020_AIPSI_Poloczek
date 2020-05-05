@@ -1,0 +1,2 @@
+1. Zmiana u¿ytkowników na 'Goœæ' i 'Zalogowany'. Zalogowany nie musi teraz weryfikowaæ wystawianych ofert i jest to¿samy z Nabywca+Sprzedawca.
+2. Obiekt mieszkalny - mieszkanie lub dom.
