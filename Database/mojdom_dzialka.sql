@@ -16,28 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `nieruchomość`
+-- Table structure for table `dzialka`
 --
 
-DROP TABLE IF EXISTS `nieruchomość`;
+DROP TABLE IF EXISTS `dzialka`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `nieruchomość` (
-  `idnieruchomość` int(11) NOT NULL AUTO_INCREMENT,
-  `id_powierzchniaPowierzchni` int(11) DEFAULT NULL,
-  `id_adres` varchar(45) DEFAULT NULL,
-  `nazwa` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idnieruchomość`)
+CREATE TABLE `dzialka` (
+  `idDzialka` int(11) NOT NULL,
+  `idTypDzialki` int(11) DEFAULT NULL,
+  `ogrodzenie` tinyint(4) DEFAULT NULL,
+  `prad` tinyint(4) DEFAULT NULL,
+  `woda` tinyint(4) DEFAULT NULL,
+  `gaz` tinyint(4) DEFAULT NULL,
+  `kanalizacja` tinyint(4) DEFAULT NULL,
+  `dostepDoDrogi` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`idDzialka`),
+  KEY `idTypDzialki` (`idTypDzialki`),
+  CONSTRAINT `dzialka_ibfk_1` FOREIGN KEY (`idTypDzialki`) REFERENCES `typ_dzialki` (`idTypDzialki`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `nieruchomość`
+-- Dumping data for table `dzialka`
 --
 
-LOCK TABLES `nieruchomość` WRITE;
-/*!40000 ALTER TABLE `nieruchomość` DISABLE KEYS */;
-/*!40000 ALTER TABLE `nieruchomość` ENABLE KEYS */;
+LOCK TABLES `dzialka` WRITE;
+/*!40000 ALTER TABLE `dzialka` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dzialka` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19 20:43:41
+-- Dump completed on 2020-06-01 18:32:51

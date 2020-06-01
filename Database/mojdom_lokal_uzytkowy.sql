@@ -16,27 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `lokal_użytkowy`
+-- Table structure for table `lokal_uzytkowy`
 --
 
-DROP TABLE IF EXISTS `lokal_użytkowy`;
+DROP TABLE IF EXISTS `lokal_uzytkowy`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `lokal_użytkowy` (
-  `idlokal_użytkowy` int(11) NOT NULL,
+CREATE TABLE `lokal_uzytkowy` (
+  `idLokalUzytkowy` int(11) NOT NULL,
   `kuchnia` tinyint(4) DEFAULT NULL,
-  `łazienka` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`idlokal_użytkowy`)
+  `lazienka` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`idLokalUzytkowy`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `lokal_użytkowy`
+-- Dumping data for table `lokal_uzytkowy`
 --
 
-LOCK TABLES `lokal_użytkowy` WRITE;
-/*!40000 ALTER TABLE `lokal_użytkowy` DISABLE KEYS */;
-/*!40000 ALTER TABLE `lokal_użytkowy` ENABLE KEYS */;
+LOCK TABLES `lokal_uzytkowy` WRITE;
+/*!40000 ALTER TABLE `lokal_uzytkowy` DISABLE KEYS */;
+/*!40000 ALTER TABLE `lokal_uzytkowy` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19 20:43:41
+-- Dump completed on 2020-06-01 18:32:51

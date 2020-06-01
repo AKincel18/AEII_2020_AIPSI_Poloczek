@@ -25,10 +25,16 @@ DROP TABLE IF EXISTS `zalogowany`;
 CREATE TABLE `zalogowany` (
   `idZalogowany` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(45) DEFAULT NULL,
-  `numer_telefonu` varchar(45) DEFAULT NULL,
+  `numerTelefonu` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `hasło` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idZalogowany`)
+  `idFirma` int(11) DEFAULT NULL,
+  `idOsobaPrywatna` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idZalogowany`),
+  KEY `idFirma` (`idFirma`),
+  KEY `idOsobaPrywatna` (`idOsobaPrywatna`),
+  CONSTRAINT `zalogowany_ibfk_1` FOREIGN KEY (`idFirma`) REFERENCES `firma` (`idFirma`),
+  CONSTRAINT `zalogowany_ibfk_2` FOREIGN KEY (`idOsobaPrywatna`) REFERENCES `osoba_prywatna` (`idOsobaPrywatna`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -50,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19 20:43:46
+-- Dump completed on 2020-06-01 18:32:57

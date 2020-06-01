@@ -23,13 +23,19 @@ DROP TABLE IF EXISTS `obiekt_mieszkalny`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `obiekt_mieszkalny` (
-  `idobiekt_mieszkalny` int(11) NOT NULL,
+  `idObiektMieszkalny` int(11) NOT NULL,
   `liczbaPokoi` int(11) DEFAULT NULL,
-  `liczbaPoziomów` int(11) DEFAULT NULL,
-  `idGarażu` int(11) DEFAULT NULL,
-  `idDziałki` int(11) DEFAULT NULL,
+  `liczbaPoziomow` int(11) DEFAULT NULL,
   `powierzchniaPiwnicy` double DEFAULT NULL COMMENT 'w metrach kwadratowych',
-  PRIMARY KEY (`idobiekt_mieszkalny`)
+  `pietro` int(11) DEFAULT NULL,
+  `czyDom` tinyint(1) DEFAULT NULL,
+  `idGaraz` int(11) DEFAULT NULL,
+  `idDzialka` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idObiektMieszkalny`),
+  KEY `idGaraz` (`idGaraz`),
+  KEY `idDzialka` (`idDzialka`),
+  CONSTRAINT `obiekt_mieszkalny_ibfk_1` FOREIGN KEY (`idGaraz`) REFERENCES `garaz` (`idGaraz`),
+  CONSTRAINT `obiekt_mieszkalny_ibfk_2` FOREIGN KEY (`idDzialka`) REFERENCES `dzialka` (`idDzialka`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -51,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19 20:43:42
+-- Dump completed on 2020-06-01 18:32:55

@@ -28,9 +28,10 @@ CREATE TABLE `oferta` (
   `opis` varchar(45) DEFAULT NULL,
   `rynekPierwotny` tinyint(4) DEFAULT NULL COMMENT 'boolean type',
   `dostępnaOd` datetime DEFAULT NULL,
-  `idNieruchomości` int(11) DEFAULT NULL,
-  `idWystawiającego` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idOferta`)
+  `idNieruchomosci` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idOferta`),
+  KEY `idNieruchomosci` (`idNieruchomosci`),
+  CONSTRAINT `oferta_ibfk_1` FOREIGN KEY (`idNieruchomosci`) REFERENCES `nieruchomosc` (`idNieruchomosc`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19 20:43:45
+-- Dump completed on 2020-06-01 18:32:52

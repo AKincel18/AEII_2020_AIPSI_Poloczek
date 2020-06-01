@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `osoba_prywatna`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `osoba_prywatna` (
-  `idosoba_prywatna` int(11) NOT NULL AUTO_INCREMENT,
-  `imię` varchar(45) DEFAULT NULL,
+  `idOsobaPrywatna` int(11) NOT NULL,
+  `imie` varchar(45) DEFAULT NULL,
   `nazwisko` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idosoba_prywatna`)
+  PRIMARY KEY (`idOsobaPrywatna`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19 20:43:43
+-- Dump completed on 2020-06-01 18:32:47

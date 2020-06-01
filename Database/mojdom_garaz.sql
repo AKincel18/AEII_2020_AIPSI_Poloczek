@@ -16,32 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `działka`
+-- Table structure for table `garaz`
 --
 
-DROP TABLE IF EXISTS `działka`;
+DROP TABLE IF EXISTS `garaz`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `działka` (
-  `iddziałka` int(11) NOT NULL AUTO_INCREMENT,
-  `id_typDziałki` int(11) DEFAULT NULL,
-  `ogrodzenie` tinyint(4) DEFAULT NULL,
-  `prąd` tinyint(4) DEFAULT NULL,
-  `woda` tinyint(4) DEFAULT NULL,
-  `gaz` tinyint(4) DEFAULT NULL,
-  `kanalizacja` tinyint(4) DEFAULT NULL,
-  `dostępDoDrogi` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`iddziałka`)
+CREATE TABLE `garaz` (
+  `idGaraz` int(11) NOT NULL,
+  `długosc` double DEFAULT NULL,
+  `szerokosc` double DEFAULT NULL,
+  `wysokosc` double DEFAULT NULL,
+  PRIMARY KEY (`idGaraz`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `działka`
+-- Dumping data for table `garaz`
 --
 
-LOCK TABLES `działka` WRITE;
-/*!40000 ALTER TABLE `działka` DISABLE KEYS */;
-/*!40000 ALTER TABLE `działka` ENABLE KEYS */;
+LOCK TABLES `garaz` WRITE;
+/*!40000 ALTER TABLE `garaz` DISABLE KEYS */;
+/*!40000 ALTER TABLE `garaz` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19 20:43:39
+-- Dump completed on 2020-06-01 18:32:56
