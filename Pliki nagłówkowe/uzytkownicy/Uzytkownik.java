@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class Uzytkownik {
 
-    public List<Oferta> filtrujOferty(Double cenaOd, Double cenaDo, String nazwa, Boolean rynekPierwotny, LocalDate dostepnaOd) {
+    public List<Oferta> filtrujOferty(Double cenaOd, Double cenaDo, String nazwa, Boolean rynekPierwotny, LocalDate dostepnaOd, String typNieruchomosci) {
         return Collections.emptyList();
     }
 
@@ -11,6 +11,6 @@ public class Uzytkownik {
         return Collections.emptyList();
     }
 
-    public void przegladajOferte(Oferta oferta) {
+    public void przegladajOferte(Integer idOferty) {
     }
 }
